@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let circleRadius = 0;
 
     const image = new Image();
-    image.src = 'songoku.png'; // 이미지 경로 변경
+    image.src = 'songoku.png'; 
 
 
     function scalingCircle (circleRadius){
@@ -20,8 +20,8 @@ document.addEventListener('DOMContentLoaded', function() {
             let risingCircle = 128;
             return risingCircle;
         }
-        let risingCircle = Math.pow(2, circleRadius); // 2의 circleRadius 제곱을 계산
-        return risingCircle; // 계산된 값을 반환
+        let risingCircle = Math.pow(2, circleRadius); // 지수함수 = y = 2^x 
+        return risingCircle; 
     }
 
     function updateCanvas() {
@@ -37,9 +37,6 @@ document.addEventListener('DOMContentLoaded', function() {
             ctx.fillStyle = 'black';
             ctx.fill();
 
-            if (updatedCircle >= 1 && updatedCircle <= 2) {
-
-            }
         }
 
         requestAnimationFrame(updateCanvas);
